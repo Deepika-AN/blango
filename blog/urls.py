@@ -1,7 +1,8 @@
-# # other imports
-# import blog.views
+# other imports
+from django.contrib import admin
+from django.urls import path
+import blog.views
 
-# urlpatterns = [
-#     # other patterns
-#     path("", blog.views.index)
-# ]
+urlpatterns = [
+    path("", blog.views.index)
+]
