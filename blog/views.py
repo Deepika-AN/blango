@@ -32,3 +32,6 @@ def index(request):
 
   return render(request, "index.html", {"posts": posts, "comment_form": comment_form})
 
+def get_ip(request):
+  from django.http import HttpResponse
+  return HttpResponse(request.META['REMOTE_ADDR'])
