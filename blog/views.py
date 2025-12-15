@@ -9,10 +9,7 @@ logger = logging.getLogger(__name__)
 # Create your views here.
 def index(request):
   posts = Post.objects.filter(published_at=timezone.now())
-  logger.debug("Got %d posts", len(posts))
-  logger.info(
-    "Created comment on Post %d for user %s", post.pk, request.user
-)
+
 
   if request.user.is_active:
     if request.method == "POST":

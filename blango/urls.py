@@ -24,7 +24,8 @@ print(f"Time zone: {settings.TIME_ZONE}")
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", blog.views.index),
-    path("ip/", blog.views.get_ip)
+    path("ip/", blog.views.get_ip),
+    path("accounts/", include("allauth.urls")),
 ]
 
 if settings.DEBUG:
